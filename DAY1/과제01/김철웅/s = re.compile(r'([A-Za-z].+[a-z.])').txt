@@ -1,0 +1,7 @@
+s = re.compile(r'([A-Za-z].+[a-z.])')
+print(set(re.findall(s,script101)))
+print(s)
+
+s2 = re.compile(r'([A-Za-z].+[a-z.])')
+print(set(re.findall(s2,script101)))
+print(s2)
