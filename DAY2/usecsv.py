@@ -13,9 +13,11 @@ def opencsv(filename):
 
 def switchcsv(listName):
     for i in listName:
-        for j in listName:
+        for j in i:
+            # 위에 i 에 listName 로 지정하면 값이 변경되지 않는다 
             try:
                 i[i.index(j)] = float(re.sub(',','',j))
             except:
                 pass
+      
     return listName

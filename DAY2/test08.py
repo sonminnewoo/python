@@ -12,8 +12,9 @@ for i in nlist:
     foreign = 0
     try :
         foreign = round(i[2]/(i[1]+i[2])*100,1)
+     
         if foreign>7:
-            result.append(i[0],i[1],i[2],foreign)
+            result.append([i[0],i[1],i[2],foreign])
     except:
         pass
 
@@ -30,4 +31,4 @@ with open('foreign.csv' , 'w') as outFp:
 import csv
 with open('foreign11.csv' , 'w') as f:
     a = csv.writer(f)
-    a.writerow(result)
+    a.writerows(result)
