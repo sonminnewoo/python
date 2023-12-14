@@ -4,6 +4,8 @@ import numpy as np
 SIZE = 5
 numpyAry = np.random.randint(0,255, size=(SIZE, SIZE))
 # numpyAry 라는 변수에 난수 발생.정수로 .
+# size 로 (0,255, size=(SIZE, SIZE)) 0 ,255 
 print(numpyAry)
 numpyAry +=100 # 배열에 100 더하기
 print(numpyAry)
+
