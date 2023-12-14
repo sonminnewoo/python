@@ -57,7 +57,8 @@ hhmmss = now.strftime('%I-%M-%S')
 
 # # %S : 0을 채운 두 자리 수의 초 ex) 00, 01 ... 58, 59
 now_weather_list = ['연월일', '시분초', '온도', '습도', '강수량', '풍향']
+print(now_weather_list)
+now_weather_list.append([yymmdd, hhmmss, temperature, humi, rain, wind])
 for i in now_weather_list : 
     print(i)
-    # .append([yymmdd, hhmmss, temperature, humi, rain, wind])
-print(now_weather_list)
+    # 
