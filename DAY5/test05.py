@@ -18,8 +18,7 @@ for i in txt.select('tr') :
     # txt 안에서 원하는 tr 테그만 가져온다 
     tds = i.select('td')
     datas.append([tds[0].text,tds[5].text,tds[-4].text])
-    # temp = i.select_one('tr:nth-child(1) > td:nth-child(7)').text
-    # humi = i.select_one('tr:nth-child(1) > td:nth-child(11)').text
+    
 print(datas)
 
 # 안에 파일 넣기 

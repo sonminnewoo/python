@@ -6,6 +6,8 @@ csv_read1 = pd.read_csv('weather.csv', encoding='utf-8-sig')
 # pandas 를 쓰면 그냥 알아서 통째로 읽어온다 
 print(csv_read1)
 print(csv_read1.head())
+print(csv_read1.columns.head())  # 헤더값 출력 
+
 print(csv_read1['기온'].mean())
 # 평균을 내는 방법 1
 print(csv_read1.습도.mean())
