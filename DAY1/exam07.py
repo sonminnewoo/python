@@ -28,4 +28,11 @@ for wow in range(1,10) :
         continue 
     print(wow)
 
+sum = 0
+print('--------------------------------')
+for i in range(1,10,3) : 
+    print(i)
+    sum += i 
+print(sum)
+
 # continue 는 다시 반복문으로 이동
