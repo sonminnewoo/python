@@ -14,7 +14,6 @@ while True:
   # 습도 humi
   humi = tag.select_one('p.humidity').text
   # 강수량 rain
-  print(humi)
   rain = tag.select_one('p.rainfall').text
   # 풍향 wind
   wind = tag.select_one('p.wind').text
@@ -25,7 +24,7 @@ while True:
   weather_list.append([yymmdd, hhmmss,temper,humi,rain,wind ])
   print(weather_list)
 
-  time.sleep(5)  
+  time.sleep(10)  
 
 
 

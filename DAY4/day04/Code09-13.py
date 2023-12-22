@@ -4,7 +4,7 @@ import time
 import bs4
 import csv
 
-csvName = './python/cloud/CSV/Code0913_weather.csv'
+csvName = "../CSV/Code0913_weather.csv"
 with open(csvName, 'w', newline='') as csvFp:
   csvWriter = csv.writer(csvFp)
   csvWriter.writerow(['연월일', '시분초', '온도', '습도', '강수량', '풍향'])

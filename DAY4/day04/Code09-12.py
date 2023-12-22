@@ -2,7 +2,7 @@ import csv
 import datetime
 import time
 
-csvName = './python/cloud/CSV/datetime1.csv'
+csvName = '../CSV/datetime1.csv'
 with open(csvName, 'w', newline='') as csvFp:
   csvWriter = csv.writer(csvFp)
   csvWriter.writerow(['연월일', '시분초'])
