@@ -8,7 +8,14 @@ soup = BeautifulSoup(req.text, 'lxml')
 
 # 1. 웹에서 필요한 데이터 가져온다
 
+import pymysql
+con = pymysql.connect(host='127.0.0.1' , user='root', password='3123', 
+                      db='pythondb' , charset='utf8')
+cur = con.cursor()
 weather = {}
+
+insert_sql = "insert into forecast(city, tmef, wf , tmn, tmx) values(%s,%s,%s,%s,%s)"
+
 # dick 선언
 for i in soup.find_all('location'):
     # 로케이션 태그 하위 항목들을 
@@ -24,13 +31,11 @@ for i in soup.find_all('location'):
 # print(weather)
 # 데이터 베이스에 insert
 
-import pymysql
-con = pymysql.connect(host='127.0.0.1' , user='root', password='3123', 
-                      db='pythondb' , charset='utf8')
-cur = con.cursor()
+
+
 # cur.execute("CREATE TABLE forcast(city VARCHAR(500),tmef VARCHAR(500),wf VARCHAR(500),tmn VARCHAR(500),tmx VARCHAR(500))")
 # cur.execute("DROP TABLE forcast")
-insert_sql = "insert into forecast(city, tmef, wf , tmn, tmx) values(%s,%s,%s,%s,%s)"
+
 
 for i in weather :
     for j in weather[i] : 
