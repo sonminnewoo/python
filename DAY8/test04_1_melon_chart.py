@@ -52,6 +52,7 @@ df = pd.DataFrame.from_dict(datadic, orient='index', columns=['Count'])
 plt.pie(df['Count'], labels=df.index, autopct='%1.1f%%', startangle=90)
 plt.title('Likes Distribution')
 plt.show()
+plt.bar()
 
 
 

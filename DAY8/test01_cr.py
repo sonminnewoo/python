@@ -17,6 +17,7 @@ for code in codes:
   x.append(name)
   today = soup.select_one('div > p.no_today')
   price = today.select_one('span.blind').get_text()
+  # 
   y.append(int(price))
   prices.append([name, price])
 
